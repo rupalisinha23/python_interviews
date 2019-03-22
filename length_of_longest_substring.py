@@ -1,3 +1,9 @@
+"""
+Length of longest non-repeating substring
+Status: Solved by Me
+"""
+
+
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         temp_list = []

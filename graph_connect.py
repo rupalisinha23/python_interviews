@@ -2,6 +2,12 @@ from collections import defaultdict
 import itertools
 
 
+"""
+Minimum cost to connect all the nodes of a graph
+Status: Solved by Me
+"""
+
+
 # This class represents a directed graph using adjacency list representation
 class Graph:
     def __init__(self, vertices):

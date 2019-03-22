@@ -1,3 +1,9 @@
+"""
+Make numbers of inversed Linked Lists and the numbers and convert to another LinkedList after inverting
+Status: Solved by Me
+"""
+
+
 class ListNode:
     def __init__(self, x):
         self.val = x

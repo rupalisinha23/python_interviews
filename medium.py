@@ -25,7 +25,6 @@ class Solution:
                 i_max = i - 1
             else:
                 # i is perfect
-
                 if i == 0:
                     max_of_left = list_b[j-1]
                 elif j == 0:

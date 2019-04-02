@@ -37,3 +37,5 @@ if __name__ == '__main__':
     n = 4
     sol = Solution()
     print(sol.convert(a, n))
+    
+

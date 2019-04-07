@@ -1,3 +1,8 @@
+## Interview preparations
+
+This repository is just my practise solutions for interview questions that are asked frequently
+
+
 #### Application of Binary Trees
 To squabble about the performance of binary-trees is meaningless - they are not a data structure, 
 but a family of data structures, all with different performance characteristics. While it is true that unbalanced binary

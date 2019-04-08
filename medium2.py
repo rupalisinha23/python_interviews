@@ -10,7 +10,7 @@ def medium(num_list):
         return 0.0
     elif n > 0 and n % 2 == 0:
         return float((num_list[int(n/2)] + num_list[(int(n/2)) - 1]) / 2)
-    elif n > 0 and n % 2 !=0:
+    elif n > 0 and n % 2 != 0:
         return float(num_list[int((n - 1) / 2)])
 
 

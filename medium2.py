@@ -15,7 +15,7 @@ def medium(num_list):
 
 
 class Solution:
-    def findMedianSortedArrays(self, nums1, nums2) -> float:
+    def find_medium_two_arrays(self, nums1, nums2) -> float:
         nums1.extend(nums2)
         list.sort(nums1)
         return medium(nums1)
@@ -25,4 +25,4 @@ if __name__ == '__main__':
     a = [1, 5, 8, 9]
     b = [6, 7, 10, 9, 11]
     sol = Solution()
-    print(sol.findMedianSortedArrays(a, b))
+    print(sol.find_medium_two_arrays(a, b))

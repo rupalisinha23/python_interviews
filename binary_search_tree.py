@@ -32,6 +32,7 @@ class Node:
 
         if is_left_bst and root.right:
             is_right_bst = self.is_bst(root.right, root.key, upper_lim)
+
         return is_left_bst and is_right_bst
 
 

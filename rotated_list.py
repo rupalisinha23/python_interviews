@@ -25,7 +25,7 @@ def rotated_or_not(input_list1, input_list2):
         return False
     else:
         for i in range(0, len_a):
-            j = (i + key_index)%len_a
+            j = (i + key_index) % len_a
             if input_list1[i] != input_list2[j]:
                 return False
     return True

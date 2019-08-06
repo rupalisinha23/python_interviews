@@ -10,26 +10,28 @@ A   L S  I G
 Y A   H R
 P     I
 
-solution: could not solve
+solution: could not solve, copied from leetcode submissions
 """
 
 
-class Solution:
-    def convert(self, s: str, numRows: int) -> str:
+class Solution(object):
+    def convert(self, s, numRows):
+        lines = [""] * numRows
+        increment = numRows + (numRows - 2)
+
         if numRows == 1:
             return s
 
-        rows = [''] * min(numRows, len(s))
-        cur_row, go_down = 0, 0
+        try:
+            for index in range(len(s))[::increment]:
+                for index_down in range(numRows):
+                    lines[index_down] += s[index + index_down]
+                for index_up in range(numRows)[1:-1]:
+                    lines[numRows - index_up - 1] += s[(index + numRows + index_up - 1)]
+        except:
+            pass
 
-        for c in s:
-            rows[cur_row] += c
-            if cur_row == 0 or cur_row == numRows - 1:
-                go_down ^= 1
-
-            cur_row += 1 if go_down else -1
-
-        return ''.join(row for row in rows)
+        return ''.join(lines)
 
 
 if __name__ == '__main__':

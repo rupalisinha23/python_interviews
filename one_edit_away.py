@@ -29,12 +29,12 @@ def find_diff_len(input1, input2):
 
 
 def one_edit_away(input1, input2):
+    if input1 == input2:
+        return False
     len1 = len(input1)
     len2 = len(input2)
     if abs(len1 - len2) >= 2:
         return False
-    elif input1 == input2:
-        return True
     elif len1 == len2:
         count_diff = 0
         for i in range(0, len1):
@@ -51,15 +51,22 @@ def one_edit_away(input1, input2):
 
 
 if __name__== '__main__':
-    input1 = "dfgte"
-    input2 = "dft"
-    print(one_edit_away("abcde", "abcd"))  # should return True
-    print(one_edit_away("abde", "abcde"))  # should return True
-    print(one_edit_away("a", "a"))  # should return True
-    print(one_edit_away("abcdef", "abqdef"))  # should return True
-    print(one_edit_away("abcdef", "abccef"))  # should return True
-    print(one_edit_away("abcdef", "abcde"))  # should return True
-    print(one_edit_away("aaa", "abc"))  # should return False
-    print(one_edit_away("abcde", "abc"))  # should return False
-    print(one_edit_away("abc", "abcde"))  # should return False
-    print(one_edit_away("abc", "bcc")) # should return False
+    print("abcde", "abcd",
+          one_edit_away("abcde", "abcd"))  # should return True
+    print("abde", "abcde",
+          one_edit_away("abde", "abcde"))  # should return True
+    print("a", "a", one_edit_away("a", "a"))  # should return True
+    print("abcdef", "abqdef",
+          one_edit_away("abcdef", "abqdef"))  # should return True
+    print("abcdef", "abccef",
+          one_edit_away("abcdef", "abccef"))  # should return True
+    print("abcdef", "abcde",
+          one_edit_away("abcdef", "abcde"))  # should return True
+    print("aaa", "abc",
+          one_edit_away("aaa", "abc"))  # should return False
+    print("abcde", "abc",
+          one_edit_away("abcde", "abc"))  # should return False
+    print("abc", "abcde",
+          one_edit_away("abc", "abcde"))  # should return False
+    print("abc", "bcc",
+          one_edit_away("abc", "bcc"))  # should return False

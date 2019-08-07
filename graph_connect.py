@@ -8,11 +8,12 @@ Status: Solved by Me
 """
 
 
-# This class represents a directed graph using adjacency list representation
+# This class represents a directed graph using adjacency list
+# representation
 class Graph:
     def __init__(self, vertices):
         self.V = vertices  # No. of vertices
-        self.graph = defaultdict(list)  # default dictionary to store graph
+        self.graph = defaultdict(list)
 
     def add_edge(self, u, v):
         self.graph[u].append(v)

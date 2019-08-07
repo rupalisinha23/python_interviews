@@ -1,5 +1,6 @@
 """
-Binary Search Tree or not"""
+Binary Search Tree or not
+"""
 
 
 class Node:
@@ -13,7 +14,8 @@ class Node:
     def count_nodes(self, root):
         if root is None:
             return 0
-        return 1 + self.count_nodes(root.left) + self.count_nodes(root.right)
+        return 1 + self.count_nodes(root.left) + \
+                   self.count_nodes(root.right)
 
     # This function checks if a binary tree is binary search tree or not
     def is_bst(self, root, lower_lim, upper_lim):

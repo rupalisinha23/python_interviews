@@ -14,7 +14,8 @@ class Node:
     def count_nodes(self, root):
         if root is None:
             return 0
-        return 1 + self.count_nodes(root.left) + self.count_nodes(root.right)
+        return 1 + self.count_nodes(root.left) + \
+                   self.count_nodes(root.right)
 
     # This function checks if a binary tree is complete or not
     def is_complete(self, root, index, number_nodes):
@@ -22,13 +23,15 @@ class Node:
         if root is None:
             return True
 
-        # If index assigned to current nodes is more than number of nodes in tree, then tree is not complete
+        # If index assigned to current nodes is more than number of
+        # nodes in tree, then tree is not complete
         if index >= number_nodes:
             return False
 
         # Recur for left and right sub tress
-        return self.is_complete(root.left, 2 * index + 1, number_nodes) and self.is_complete(root.right, 2 * index + 2,
-                                                                                             number_nodes)
+        return self.is_complete(root.left, 2 * index + 1, number_nodes)\
+               and self.is_complete(root.right, 2 * index + 2,
+                                    number_nodes)
 
 
 if __name__ == '__main__':

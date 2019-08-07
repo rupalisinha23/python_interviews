@@ -1,13 +1,5 @@
-graph = {'A': set(['B', 'C']),
-         'B': set(['A', 'D', 'E']),
-         'C': set(['A', 'F']),
-         'D': set(['B']),
-         'E': set(['B', 'F']),
-         'F': set(['C', 'E'])}
-
-
 # non-recursive
-def dfs(graph, start):
+def dfs_nonrecur(graph, start):
     visited, stack = set(), [start]
     while stack:
         vertex = stack.pop()
@@ -17,17 +9,22 @@ def dfs(graph, start):
     return visited
 
 
-dfs(graph, 'A') # {'E', 'D', 'F', 'A', 'C', 'B'}
-
-
 # recursive
-def dfs(graph, start, visited=None):
+def dfs_recur(graph, start, visited=None):
     if visited is None:
         visited = set()
     visited.add(start)
     for next in graph[start] - visited:
-        dfs(graph, next, visited)
+        dfs_recur(graph, next, visited)
     return visited
 
 
-dfs(graph, 'C') # {'E', 'D', 'F', 'A', 'C', 'B'}
+graph = {'A': {'B', 'C'},
+         'B': {'A', 'D', 'E'},
+         'C': {'A', 'F'},
+         'D': {'B'},
+         'E': {'B', 'F'},
+         'F': {'C', 'E'}}
+
+dfs_nonrecur(graph, 'C') # {'E', 'D', 'F', 'A', 'C', 'B'}
+dfs_recur(graph, 'A') # {'E', 'D', 'F', 'A', 'C', 'B'}

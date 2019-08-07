@@ -17,9 +17,8 @@ def print_level_order(root):
     for i in range(1, h + 1):
         print_given_level(root, i)
 
-    # Print nodes at a given level
 
-
+# Print nodes at a given level
 def print_given_level(root, level):
     if root is None:
         return
@@ -30,12 +29,8 @@ def print_given_level(root, level):
         print_given_level(root.right, level - 1)
 
 
-""" Compute the height of a tree--the number of nodes 
-    along the longest path from the root node down to 
-    the farthest leaf node 
-"""
-
-
+# Compute the height of a tree--the number of nodes along the longest
+# path from the root node down to the farthest leaf node
 def height(node):
     if node is None:
         return 0

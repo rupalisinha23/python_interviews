@@ -6,12 +6,19 @@ class TreeNode:
         self.right = None
 
 
-def range_sum_bst(root: TreeNode, L: int, R: int) -> int:
+def range_sum_bst(root: TreeNode, l: int, r: int) -> int:
+    """
+    return sum within a given range out of a binary search tree
+    :param root:
+    :param l:
+    :param r:
+    :return:
+    """
     if root is None:
         return 0
-    if L <= root.val <= R:
-        return root.val + range_sum_bst(root.left, L, R) + range_sum_bst(root.right, L, R)
-    return 0 + range_sum_bst(root.left, L, R) + range_sum_bst(root.right, L, R)
+    if l <= root.val <= r:
+        return root.val + range_sum_bst(root.left, l, r) + range_sum_bst(root.right, l, r)
+    return 0 + range_sum_bst(root.left, l, r) + range_sum_bst(root.right, l, r)
 
 
 m = TreeNode(10)

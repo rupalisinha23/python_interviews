@@ -1,11 +1,8 @@
-"""
-Nth node value from the end of a linked list
-Status: Solved by Me
-"""
-
-
 class ListNode:
-
+    """
+    Nth node value from the end of a linked list
+    Status: Solved by Me
+    """
     def __init__(self, x):
         self.val = x
         self.next = None

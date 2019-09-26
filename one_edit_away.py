@@ -1,17 +1,15 @@
-"""
-replace/add/delete
-abcd
-abce
-
-adfgt
-adft
-
-adfre
-adgfre
-"""
-
-
 def find_diff_len(input1, input2):
+    """
+    replace/add/delete
+    abcd
+    abce
+
+    adfgt
+    adft
+
+    adfre
+    adgfre
+    """
     len2 = len(input2)
     itr1 = 0
     itr2 = 0

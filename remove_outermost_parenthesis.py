@@ -1,4 +1,10 @@
 def remove_outer_most_parenthesis(S):
+    """
+    (()())(())(()(())) -> ()()()()(())
+    (()()) -> ()()
+    :param S:
+    :return:
+    """
     if S == "":
         return ""
     stack_im = []

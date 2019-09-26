@@ -1,9 +1,7 @@
-"""
-If product of any three elements in a list is equal to a given number
-"""
-
-
 def multiplication_of_three(input_list, product):
+    """
+    If product of any three elements in a list is equal to a given number
+    """
     if product is None or input_list is None or len(input_list) == 0 or product == 0:
         return None
 

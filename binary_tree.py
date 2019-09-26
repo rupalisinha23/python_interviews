@@ -1,9 +1,7 @@
-"""
-Completeness of a binary tree
-"""
-
-
 class Node:
+    """
+    Completeness of a binary tree
+    """
     # Constructor to create a new node
     def __init__(self, key):
         self.key = key

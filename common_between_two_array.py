@@ -1,10 +1,7 @@
-"""
-If product of any three elements in a list is equal to a given number
-"""
-
-
 def common_between_two_array(input_list_1, input_list_2):
-
+    """
+    If product of any three elements in a list is equal to a given number
+    """
     len1 = len(input_list_1)
     len2 = len(input_list_2)
     if len1 == 0 or len2 == 0:

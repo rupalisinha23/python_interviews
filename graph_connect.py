@@ -2,15 +2,13 @@ from collections import defaultdict
 import itertools
 
 
-"""
-Minimum cost to connect all the nodes of a graph
-Status: Solved by Me
-"""
-
-
 # This class represents a directed graph using adjacency list
 # representation
 class Graph:
+    """
+    Minimum cost to connect all the nodes of a graph
+    Status: Solved by Me
+    """
     def __init__(self, vertices):
         self.V = vertices  # No. of vertices
         self.graph = defaultdict(list)

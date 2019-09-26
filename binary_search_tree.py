@@ -1,9 +1,7 @@
-"""
-Binary Search Tree or not
-"""
-
-
 class Node:
+    """
+    Binary Search Tree or not
+    """
     # Constructor to create a new node
     def __init__(self, key):
         self.key = key

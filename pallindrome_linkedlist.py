@@ -26,7 +26,8 @@ class Solution:
 
         fast = slow.next
         slow.next = prev
-
+        
+        # if odd
         if flag:
             slow = slow.next
       

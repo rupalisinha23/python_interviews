@@ -10,7 +10,7 @@ class Solution:
         if root==None:
             return
         #traverse root
-        if root.val:
+        if root.val is not None:
             result.append(root.val)
         #traverse left subtree
         if root.left:
@@ -34,7 +34,7 @@ class Solution:
             result.extend(self.postorderTraversal(root.right))
 
         #traverse root
-        if root.val:
+        if root.val is not None:
             result.append(root.val)
 
         return result

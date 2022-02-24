@@ -6,7 +6,7 @@
 #         self.right = right
 class Solution:
     def height(self, root):
-        if None == root:
+        if root is None:
             return 0
         l = self.height(root.left)
         r = self.height(root.right)
